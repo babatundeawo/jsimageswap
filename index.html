@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function changePic() {
+        document.getElementById("demo").src = "images/profile-pic (3).png";
+      }
+      function resetPic() {
+        document.getElementById("demo").src = "images/profile-pic (1).png";
+      }
+    </script>
+    <style>
+      body {
+        background-color: rgb(38, 39, 36);
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        text-align: center;
+      }
+      .test {
+        margin: auto;
+        width: 50%;
+        background-color: rgb(191, 188, 194);
+        border: 20px solid rgb(211, 17, 162);
+        border-radius: 100px;
+      }
+      .button {
+        width: 100%;
+      }
+      button {
+        display: inline-block;
+        padding: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        border: 5px solid rgb(14, 27, 212);
+        border-radius: 15px;
+        color: white;
+        background-color: black;
+      }
+      button:hover {
+        border-color: yellow;
+        background-color: blue;
+        color: rgb(206, 252, 0);
+      }
+      button:active {
+        border: none;
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test">
+      <img
+        src="images/profile-pic (1).png"
+        alt=""
+        id="demo"
+        width="300px"
+        onmouseover="changePic()"
+        onmouseleave="resetPic()"
+      />
+      <div class="button">
+        <button
+          onclick="document.getElementById('demo').src = 'images/profile-pic.png'"
+        >
+          Swap One
+        </button>
+        <button
+          onclick="document.getElementById('demo').src = 'images/profile-pic (2).png'"
+        >
+          Swap Two
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
